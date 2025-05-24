@@ -1,11 +1,18 @@
-height = input ("your height in meters?")
-weight = input ("your weight in kg?")
+height = float(input("your height in meters?"))
+weight = int(input("your weight in kg?"))
 
-new_weight = int(weight)
-new_height = float(height)
-BMI = round((new_weight/(new_height**2)),5)
-print(BMI)
-if BMI >18 < 25:
-    print("you are in healthy range")
-else:
-    print("you need to work on your diet")
+
+BMI = weight/(height**2)
+
+if BMI < 18.5:
+    message = "you are underweight."
+elif  18.5 <= BMI < 25:
+    message = "you have a normal weight."
+elif 25 <= BMI <  30:
+    message = "you are slightly overweight."
+elif 30 <= BMI <  35:
+    message = "you are obese."
+else: # 35 <= BMI
+    message = "you are clinically obese."
+
+print(f"Your BMI is {BMI}, {message}")
