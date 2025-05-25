@@ -2,15 +2,16 @@ height = float(input("your height in meters?"))
 weight = int(input("your weight in kg?"))
 
 
-BMI = weight/(height**2)
+BMI = round(weight/(height**2))
+print (BMI)
 
 if BMI < 18.5:
     message = "you are underweight."
-elif  18.5 <= BMI < 25:
+elif BMI < 25:
     message = "you have a normal weight."
-elif 25 <= BMI <  30:
+elif BMI <  30:
     message = "you are slightly overweight."
-elif 30 <= BMI <  35:
+elif BMI <  35:
     message = "you are obese."
 else: # 35 <= BMI
     message = "you are clinically obese."
