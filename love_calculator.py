@@ -2,28 +2,20 @@ print("The Love Calculator is calculating your score...")
 name1 = input("What is your name?")
 name2 = input("What is their name?")
 
-combined_names = name1 + name2
+combined_names = str(name1) + str(name2)
 
 names = combined_names.lower()
-one = names.count("t" and "r" and "u" and "e")
-two = names.count("l" and "o" and "v" and "e")
+one = names.count("t") +names.count("r")+ names.count("u")+ names.count("e")
+two = names.count("l") + names.count("o") + names.count("v") +names.count("e")
 
 result = str(one)+ str(two)
-print(f"your result is {result}")
+result_number = int(result)
 
+if (10 > result_number) or (result_number > 90):
+    message = ", you go together like coke and mentos"
+elif (40 < result_number < 50):
+    message = ", you are alright together"
+else:
+  message = ""
 
-
-
-# TRUE
-# LOVE
-# %
-#
-# For Love Scores less than 10 or greater than 90, the message should be:
-#
-# "Your score is *x*, you go together like coke and mentos."
-# For Love Scores between 40 and 50, the message should be:
-#
-# "Your score is *y*, you are alright together."
-# Otherwise, the message will just be their score. e.g.:
-#
-# "Your score is *z*."
+print(f"Your score is {result}{message}.")
