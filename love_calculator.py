@@ -7,8 +7,11 @@ combined_names = name1 + name2
 names = combined_names.lower()
 one = names.count("t" and "r" and "u" and "e")
 two = names.count("l" and "o" and "v" and "e")
-print(one,two)
-print(two)
+
+result = str(one)+ str(two)
+print(f"your result is {result}")
+
+
 
 
 # TRUE
