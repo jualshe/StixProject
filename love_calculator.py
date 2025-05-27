@@ -13,7 +13,7 @@ result_number = int(result)
 
 if (10 > result_number) or (result_number > 90):
     message = ", you go together like coke and mentos"
-elif (40 < result_number < 50):
+elif (40 <= result_number <= 50):
     message = ", you are alright together"
 else:
   message = ""
