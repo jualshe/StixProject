@@ -1,6 +1,6 @@
 import random
-side = random.randint(1,2)
+side = random.randint(0,1)
 if side == 1:
-    print("heads")
+    print("Heads")
 else:
-    print ("tails")
+    print ("Tails")
