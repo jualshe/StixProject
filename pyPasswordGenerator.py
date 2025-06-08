@@ -12,18 +12,25 @@ new_letters = ''
 for letter in range (0, nr_letters):
     new_letter = random.choice(letters)
     new_letters +=new_letter
-print(new_letters)
+# print(new_letters)
 
 new_symbols = ''
 for symbol in range (0, nr_symbols):
     new_symbol = random.choice(symbols)
     new_symbols += new_symbol
-print(new_symbols)
+# print(new_symbols)
 
 new_numbers = ''
 for number in range (0, nr_numbers):
     new_number = random.choice(numbers)
     new_numbers += new_number
-print(new_numbers)
+# print(new_numbers)
 
-print("Here is your password: " + new_letters+new_symbols+new_numbers)
+password_joined = new_letters+new_symbols+new_numbers
+# print(password_joined)
+
+password_list = list(password_joined)
+random.shuffle(password_list)
+randomized_password = ''.join(password_list)
+
+print(f"Your randomized password is: {randomized_password}")
