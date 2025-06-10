@@ -10,26 +10,21 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 new_letters = ''
 for letter in range (0, nr_letters):
-    new_letter = random.choice(letters)
-    new_letters +=new_letter
-# print(new_letters)
+    new_letters += random.choice(letters)
+print(new_letters)
 
 new_symbols = ''
 for symbol in range (0, nr_symbols):
-    new_symbol = random.choice(symbols)
-    new_symbols += new_symbol
-# print(new_symbols)
+    new_symbols += random.choice(symbols)
 
 new_numbers = ''
 for number in range (0, nr_numbers):
-    new_number = random.choice(numbers)
-    new_numbers += new_number
-# print(new_numbers)
+    new_numbers += random.choice(numbers)
 
 password_joined = new_letters+new_symbols+new_numbers
-# print(password_joined)
 
 password_list = list(password_joined)
+print(password_list)
 random.shuffle(password_list)
 randomized_password = ''.join(password_list)
 
