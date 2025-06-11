@@ -24,7 +24,6 @@ for number in range (0, nr_numbers):
 password_joined = new_letters+new_symbols+new_numbers
 
 password_list = list(password_joined)
-print(password_list)
 random.shuffle(password_list)
 randomized_password = ''.join(password_list)
 
