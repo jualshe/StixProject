@@ -5,15 +5,23 @@ def turn_right():
 
 
 def do_jump():
-    move()
     turn_left()
-    move()
+    while wall_on_right():
+        if at_goal() == True:
+            done()
+        elif wall_in_front():
+            turn_left()
+        else:
+            move()
     turn_right()
     move()
     turn_right()
     move()
-    turn_left()
 
 
-for i in range(0, 6):
-    do_jump()
+while at_goal() != True:
+    if wall_in_front():
+        do_jump()
+    else:
+        move()
+
