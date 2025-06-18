@@ -1,7 +1,63 @@
 import random
-# generate random words
+stages = [r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 word_list = ["baboon", "camel", "shark" ]
-#randomly choose a word from the list
+
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
@@ -12,22 +68,29 @@ for letter in range (0, word_length):
     display += ["_"]
 print(display)
 
-#TODO-1 - Use a while loop to let the user guess again.
-# Use a while loop to let the user guess again.
-# The loop should only stop once the user has guessed all the letters in the chosen_word.
-# At that point display has no more blanks ("_"). Then you can tell the user they've won
-
 end_of_the_game = False
+
+lives = 6
 
 while not end_of_the_game:
     guess = input("Guess a letter: ").lower()
+    lives: object
+
 
     for position in range(word_length):
         letter = chosen_word[position]
+
         if letter == guess:
             display [position] = letter
+    if guess not in chosen_word:
+            lives -=1
+            print(f"lives: {lives}")
+            print(stages[lives])
     print(display)
 
     if not "_" in display:
         end_of_the_game = True
         print("You won!")
+    if lives == 0:
+        end_of_the_game = True
+        print("You loose!")
