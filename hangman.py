@@ -17,7 +17,9 @@ print(display)
 # The loop should only stop once the user has guessed all the letters in the chosen_word.
 # At that point display has no more blanks ("_"). Then you can tell the user they've won
 
-while "_" in display:
+end_of_the_game = False
+
+while not end_of_the_game:
     guess = input("Guess a letter: ").lower()
 
     for position in range(word_length):
@@ -25,3 +27,7 @@ while "_" in display:
         if letter == guess:
             display [position] = letter
     print(display)
+
+    if not "_" in display:
+        end_of_the_game = True
+        print("You won!")
