@@ -29,11 +29,12 @@ while not end_of_the_game:
 
     if guess not in chosen_word:
         lives -=1
+        print(f"You guessed '{guess}' that's not in the word. You loose a life.")
         if lives == 0:
             end_of_the_game = True
             print("You loose!")
         print(f"lives: {lives}")
-        print(hangman_art.stages[lives])
+        print(stages[lives])
 
     if not "_" in display:
         end_of_the_game = True
