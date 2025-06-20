@@ -24,8 +24,13 @@ while not end_of_the_game:
         letter = chosen_word[position]
 
         if letter == guess:
-            display [position] = letter
+            if guess in display:
+                print(f"You've chosen {guess}. And you've already guessed {guess}.")
+            else:
+                display [position] = letter
+
     print(display)
+
 
     if guess not in chosen_word:
         lives -=1
