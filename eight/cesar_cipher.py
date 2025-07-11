@@ -17,6 +17,7 @@ a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
 """
 print(logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# TODO-2: What happens if the user enters a number/symbol/space?
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
 text = input("Type your message:\n").lower()
@@ -34,5 +35,7 @@ def caesar(start_text, shift_amount, cipher_direction):
         new_position = position + shift_amount
         end_text += alphabet[new_position]
     print(f"The {cipher_direction}d decoded text is {end_text}")
+# TODO-1: what if shift is higher than amount of letters in alphabet?
+# TODO-3: Can you figure out a way to restart the cipher program?
 
 caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
