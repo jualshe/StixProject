@@ -26,7 +26,5 @@ while again:
 
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
     again = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
-    if again == "yes":
-        again = True
-    else:
-        break
+    if again == "no".lower():
+        again = False
