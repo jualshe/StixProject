@@ -17,7 +17,6 @@ def caesar(start_text, shift_amount, cipher_direction):
     print(f"The {cipher_direction}d text is: {end_text}\n")
 
 again = True
-
 while again:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     text = input("Type your message:\n").lower()
