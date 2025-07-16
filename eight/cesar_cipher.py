@@ -1,7 +1,6 @@
 from art import logo
 print(logo)
 
-
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def caesar(start_text, shift_amount, cipher_direction):
@@ -18,6 +17,7 @@ def caesar(start_text, shift_amount, cipher_direction):
     print(f"The {cipher_direction}d text is: {end_text}\n")
 
 again = True
+
 while again:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     text = input("Type your message:\n").lower()
@@ -28,3 +28,4 @@ while again:
     again = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
     if again == "no".lower():
         again = False
+        print("Goodbye!")
