@@ -12,3 +12,10 @@ colours = {
 
 
 print(programming_dictionary["Function"])
+
+print(colours["pear"])
+# for key in colours:
+#     print(key)
+
+for key in colours:
+    print(colours[key])
