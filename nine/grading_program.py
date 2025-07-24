@@ -12,13 +12,14 @@ student_grades = {
 
 # TODO-2: Write your code below to add the grades to student_grades.👇
 for name in student_scores:
-  if student_scores[name] < 70:
+  score = student_scores[name]
+  if score < 70:
     student_grades[name] = "Fail"
-  if 71 <= student_scores[name] < 80 :
+  elif 71 <= score < 80 :
     student_grades[name]= "Acceptable"
-  if 81 <= student_scores[name] < 90:
+  elif 81 <= score < 90:
     student_grades[name] = "Exceeds Expectations"
-  if 91 <= student_scores[name] < 100:
+  else:
     student_grades[name] = "Outstanding"
 
 
