@@ -1,6 +1,7 @@
 import math
 def paint_calc(height,width,cover):
   result = (test_h * test_w)/coverage
+  #round a number up to the nearest whole integer, no matter what the decimal is
   rounded = math.ceil(result)
   print(f"You'll need {rounded} cans of paint.")
 
