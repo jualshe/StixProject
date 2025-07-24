@@ -12,7 +12,6 @@ colours = {
     123: "pink"
 }
 
-
 #retrieving items from dictionary
 # print(programming_dictionary["Function"])
 
@@ -22,12 +21,13 @@ colours = {
 #     print(key)
 
 # for key in colours:
-    #print(colours[key])
+#     print(colours[key])
 
 #adding a new items to dictionary
 programming_dictionary["Loop"] = "The action of doung something over and over again"
 # print(programming_dictionary)
 
+#creating a new dictionary
 empty_dictionary = {}
 # empty_dictionary []
 # print(empty_dictionary)
@@ -43,3 +43,6 @@ programming_dictionary["Bug"] = "something else"
 for key in programming_dictionary:
     print(key)
     print(programming_dictionary[key])
+
+
+print(colours)
