@@ -17,8 +17,19 @@ def add_new_bidders (person, price):
     bidders.append(new_bidder)
 
 add_new_bidders(person=name, price=bid)
+
+
 print(bidders)
 # TODO-3: Whether if new bids need to be added
+additional_user = input("Are there more bidders? Yes/No?\n")
+if additional_user == "Yes".lower():
+    clear()
+    add_new_bidders(person=name, price=bid)
+
+else:
+    print("quit")
+    quit()
+
 # TODO-4: Compare bids in dictionary
 
 
