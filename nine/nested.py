@@ -16,7 +16,7 @@ travel_log = {
     "Italy": {"favorite_cities": ["Venice","Vicenza","Rome"], "total_visits": 15}
 }
 
-# nesting a dictionary insideof the list
+# nesting a dictionary inside of the list
 travel_log2 = [
     {"country": "France",
     "cities_visited": ["Paris", "Lion", "Dijon"],

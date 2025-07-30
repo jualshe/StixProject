@@ -1,6 +1,6 @@
-country = input() # Add country name
-visits = int(input()) # Number of visits
-cities = eval(input()) # create list from formatted string
+country = input("Enter a country: ") # Add country name
+visits = int(input("How many visits? ")) # Number of visits
+cities = eval(input("What cities have you been to? ")) # create list from formatted string
 
 travel_log = [
   {
