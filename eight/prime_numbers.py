@@ -1,16 +1,24 @@
-def prime_checker(number):
-    if number <= 1:
-        print("Not prime or non-prime (must be greater than 1)")
-    else:
-        is_prime = True
-        for i in range(2, number):
-            if number % i == 0:
-                is_prime = False
-                break
-        if is_prime:
-            print(f"{number} is prime.")
-        else:
-            print(f"{number} is non-prime.")
 
-n = int(input()) # Check this number
-prime_checker(number = n)
+def find_highest_bidder(bidding_record):
+    highest_bid = 0
+    winner = ""
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
+
+
+bids = {}
+continue_bidding = True
+while continue_bidding:
+    name = input("What is your name?: ")
+    price = int(input("What is your bid?: $"))
+    bids[name] = price
+    should_continue = input("Are there any other bidders? Type 'yes or 'no'.\n")
+    if should_continue == "no":
+        continue_bidding = False
+        find_highest_bidder(bids)
+    elif should_continue == "yes":
+        print("\n" * 20)
