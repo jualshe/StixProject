@@ -1,3 +1,4 @@
+from replit import clear
 
 def find_highest_bidder(bidding_record):
     highest_bid = 0
@@ -21,4 +22,4 @@ while continue_bidding:
         continue_bidding = False
         find_highest_bidder(bids)
     elif should_continue == "yes":
-        print("\n" * 20)
+        clear()
