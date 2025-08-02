@@ -28,7 +28,7 @@ programming_dictionary["Loop"] = "The action of doung something over and over ag
 # print(programming_dictionary)
 
 #creating a new dictionary
-empty_dictionary = {}
+# empty_dictionary = {}
 # empty_dictionary []
 # print(empty_dictionary)
 
@@ -37,12 +37,11 @@ empty_dictionary = {}
 # print(programming_dictionary)
 
 #edit an item in a dictionary
-programming_dictionary["Bug"] = "something else"
+programming_dictionary["Bug"] = "A moth in your computer"
 # print(programming_dictionary)
 
 for key in programming_dictionary:
     print(key)
     print(programming_dictionary[key])
 
-
-print(colours)
+# print(colours)
