@@ -24,7 +24,13 @@ operaions = {
 }
 
 num1 = int(input("What is the first number?: "))
+
+for symbol in operaions:
+    print(symbol)
+operation_symbol = input("What operation from the list?: ")
+
 num2 = int(input("What is the second number?: "))
 
-for each in operaions:
-    print(each)
+calculation = operaions[operation_symbol]
+answer = calculation(num1, num2)
+print(f"{num1} {operation_symbol} {num2} = {answer}")
