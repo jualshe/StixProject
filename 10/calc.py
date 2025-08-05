@@ -18,22 +18,25 @@ operaions = {
     "/": divide,
 }
 
-num1 = int(input("What is the first number?: "))
-for symbol in operaions:
-    print(symbol)
-continue_calculating = True
+def calculator():
+    num1 = int(input("What is the first number?: "))
+    for symbol in operaions:
+        print(symbol)
+    continue_calculating = True
 
-while continue_calculating:
-    operation_symbol = input("What operation?: ")
-    num2 = int(input("What is the next number?: "))
-    calculation = operaions[operation_symbol]
-    answer = calculation(num1, num2)
-    print(f"{num1} {operation_symbol} {num2} = {answer}")
+    while continue_calculating:
+        operation_symbol = input("What operation?: ")
+        num2 = int(input("What is the next number?: "))
+        calculation = operaions[operation_symbol]
+        answer = calculation(num1, num2)
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-    continuation = input(f"Type 'y' to continue calculating with {answer} or type 'n' to exit ")
+        continuation = input(f"Type 'y' to continue calculating with {answer} or type 'n' to start a new calculation ")
 
-    if continuation == "y":
-        num1 = answer
-    else:
-        print("Goodbye!")
-        continue_calculating = False
+        if continuation == "y":
+            num1 = answer
+        else:
+            print("Goodbye!")
+            continue_calculating = False
+            calculator()
+calculator()
