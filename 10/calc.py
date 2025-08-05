@@ -1,20 +1,15 @@
-
 #add
 def add (n1, n2):
     return n1 + n2
-
 #subtract
 def subtract(n1, n2):
     return n1 - n2
-
 #multiply
 def multiply (n1, n2):
     return  n1 * n2
-
 #divide
 def divide (n1, n2):
     return n1 / n2
-
 
 operaions = {
     "+": add,
@@ -24,13 +19,21 @@ operaions = {
 }
 
 num1 = int(input("What is the first number?: "))
-
 for symbol in operaions:
     print(symbol)
-operation_symbol = input("What operation from the list?: ")
+continue_calculating = True
 
-num2 = int(input("What is the second number?: "))
+while continue_calculating:
+    operation_symbol = input("What operation?: ")
+    num2 = int(input("What is the next number?: "))
+    calculation = operaions[operation_symbol]
+    answer = calculation(num1, num2)
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-calculation = operaions[operation_symbol]
-answer = calculation(num1, num2)
-print(f"{num1} {operation_symbol} {num2} = {answer}")
+    continuation = input(f"Type 'y' to continue calculating with {answer} or type 'n' to exit ")
+
+    if continuation == "y":
+        num1 = answer
+    else:
+        print("Goodbye!")
+        continue_calculating = False
