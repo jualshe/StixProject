@@ -6,15 +6,18 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 # wannaplay = input("Do you want to play blackjack? Type 'yay' or 'nay': " )
 
+#TODO 2: Deal both user and computer a starting hand of 2 random card values.
 user_cards = random.sample(cards, 2)
 print(user_cards)
 computer_cards = random.sample(cards,2)
 print(computer_cards)
 
-#TODO 2: Deal both user and computer a starting hand of 2 random card values.
-# Your cards: random from the list. Computer's card: show one of two random ones to the user
-
 #TODO 3:Detect when computer or user has a blackjack. (Ace + 10 value card).
+if sum(computer_cards) == 21:
+    print("Computer won!")
+elif sum(user_cards) == 21:
+    print("User won!")
+
 
 #TODO 4:
 # more_card = input("Type 'yay' if you want another card  or 'nay' to pass: ")
