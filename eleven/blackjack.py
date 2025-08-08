@@ -1,11 +1,15 @@
+import random
 from art import logo
+print(logo)
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
+# wannaplay = input("Do you want to play blackjack? Type 'yay' or 'nay': " )
 
-#TODO 1: logo
-wannaplay = input("Do you want to play blackjack? Type 'yay' or 'nay': " )
-
+user_cards = random.sample(cards, 2)
+print(user_cards)
+computer_cards = random.sample(cards,2)
+print(computer_cards)
 
 #TODO 2: Deal both user and computer a starting hand of 2 random card values.
 # Your cards: random from the list. Computer's card: show one of two random ones to the user
@@ -22,4 +26,4 @@ wannaplay = input("Do you want to play blackjack? Type 'yay' or 'nay': " )
 
 #wannaplay = input("Do you want to play blackjack? Type 'yay' or 'nay': " )
 
-The Ace can count as 11 or 1.
+#The Ace can count as 11 or 1.
