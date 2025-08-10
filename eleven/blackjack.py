@@ -13,13 +13,18 @@ computer_cards = random.sample(cards,2)
 print(computer_cards)
 
 #TODO 3:Detect when computer or user has a blackjack. (Ace + 10 value card).
+
 if sum(computer_cards) == 21:
     print("Computer won!")
 elif sum(user_cards) == 21:
     print("User won!")
 
+#TODO: If an ace is drawn, count it as 11. But if the total goes over 21, count the ace as 1 instead.
+if sum(user_cards) or sum(computer_cards) > 21:
+    if 11 in user_cards:
+        11 == 1
 
-#TODO 4:
+#TODO 5:
 # more_card = input("Type 'yay' if you want another card  or 'nay' to pass: ")
 
 
