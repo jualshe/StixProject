@@ -10,7 +10,7 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 user_cards = random.sample(cards, 2)
 print(user_cards)
 computer_cards = random.sample(cards,2)
-print(computer_cards)
+print(f'[{computer_cards[0]}], [X]')
 
 #TODO 3:Detect when computer or user has a blackjack. (Ace + 10 value card).
 
