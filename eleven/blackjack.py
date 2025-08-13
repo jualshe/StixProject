@@ -3,16 +3,13 @@ import random
 from art import logo
 # print(logo)
 
-# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10,11,11,11,11]
-cards = [10, 10]
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-#Deal both user and computer a starting hand of 2 random card values.
+#deal both user and computer a starting hand of 2 random card values.
 user_cards = random.sample(cards, 2)
 print(user_cards)
 computer_cards = random.sample(cards,2)
-print(computer_cards)
-# print(f'[{computer_cards[0]}], [X]')
+print(f'[{computer_cards[0]}], [X]')
 
 def comparison():
     if blackjack_check():
@@ -88,4 +85,4 @@ while want_more_card:
         else:
             comparison()
 
-print(f'the score is user:{user_total} vs computer{computer_total}')
+print(f'the score is user: {user_total} vs computer: {computer_total}')
