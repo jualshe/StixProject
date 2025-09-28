@@ -1,25 +1,23 @@
-from replit import clear
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+#
+def days_in_month(year, month):
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if is_leap(year) and month == 2:
+        return 29
+    else:
+        return month_days[month-1]
 
-def find_highest_bidder(bidding_record):
-    highest_bid = 0
-    winner = ""
-    for bidder in bidding_record:
-        bid_amount = bidding_record[bidder]
-        if bid_amount > highest_bid:
-            highest_bid = bid_amount
-            winner = bidder
-    print(f"The winner is {winner} with a bid of ${highest_bid}")
-
-
-bids = {}
-continue_bidding = True
-while continue_bidding:
-    name = input("What is your name?: ")
-    price = int(input("What is your bid?: $"))
-    bids[name] = price
-    should_continue = input("Are there any other bidders? Type 'yes or 'no'.\n")
-    if should_continue == "no":
-        continue_bidding = False
-        find_highest_bidder(bids)
-    elif should_continue == "yes":
-        clear()
+year = int(input("Enter the year: "))  # Enter a year
+month = int(input("Enter the month: "))  # Enter a month
+days = days_in_month(year, month)
+print(days)
